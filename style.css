@@ -117,4 +117,11 @@ body {
   padding: 6px 10px;
   font-weight: 400;
   font-size: 18px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.footer button.active {
+  opacity: 1;
+  pointer-events: auto;
 }
