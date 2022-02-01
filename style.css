@@ -24,6 +24,7 @@ body {
 .wrapper header {
   font-size: 2rem;
   font-weight: 600;
+  color: #515371;
 }
 
 .wrapper .input-field {
@@ -38,4 +39,82 @@ body {
   height: 100%;
   border: 1px solid #ccc;
   font-size: 1rem;
+  border-radius: 3px;
+  padding-left: 1rem;
+  outline: none;
+}
+
+.input-field button {
+  width: 3.7rem;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: #4466e6;
+  color: #fff;
+  font-size: 1.7rem;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 5px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.input-field button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper .todo-list {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.todo-list li {
+  list-style-type: none;
+  height: 3rem;
+  line-height: 3rem;
+  position: relative;
+  background: #c8e9ef;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  padding: 0 15px;
+  cursor: default;
+  overflow: hidden;
+}
+
+.todo-list li span {
+  position: absolute;
+  right: -45px;
+  color: #fff;
+  width: 2.8rem;
+  text-align: center;
+  background: #ed1c24;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todo-list li:hover span {
+  right: 0;
+}
+
+.wrapper .footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: 25px;
+  justify-content: space-between;
+}
+
+.footer button {  
+  border: none;
+  outline: none;
+  background: #4466e6;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px 10px;
+  font-weight: 400;
+  font-size: 18px;
 }

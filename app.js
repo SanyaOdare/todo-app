@@ -1,67 +1,38 @@
-var count = 1;
+// select all elements
+const inputBox = document.querySelector(".input-field input");
+const addBtn = document.querySelector(".input-field button");
 
-document.getElementById("click-me").onclick = function() {
-  addList();
-}
-
-function addList() {
-  var userList = document.getElementById("list").value;
-  console.log(userList);
-  
-  if (userList == "") {
-
-    // create list
-    var newList = document.createElement("li");
-    newList.className = "list-group-item";
-    newList.id = "list"+count;
-    var addListHere = document.getElementById("list-items");
-    addListHere.appendChild(newList);
-    var newParagraph = document.createElement("span");
-    var newText = document.createTextNode(userList);
-    newParagraph.appendChild(newText);
-    var addParagraphHere = document.getElementById("list"+count);
-    addParagraphHere.appendChild(newParagraph);
-
-    // create button and assign className
-    var newButton = document.createElement("button");
-    newButton.className = "remove";
-    newButton.id = "remove"+count;
-    var newButtonText = document.createTextNode("devare");
-    newButton.appendChild(newButtonText);
-    var addButtonHere = document.getElementsByClassName("list-group-item")[count-1];
-    addButtonHere.appendChild(newButton);
-    document.getElementById(newButton.id).onclick = function() {
-      devareList(newList.id)};
-
-      // devare content after clicking the button
-      document.getElementById("list").value = "";
-      return count++;
+inputBox.onkeyup = () => {
+  let userData = inputBox.value; //get user's entered input value
+  if(userData.trim() != 0) { // if user input values aren't only spaces
+    addBtn.classList.add("active"); // activate the add button
+  } else {
+    addBtn.classList.remove("active"); // deactivate the add button
   }
-
-  return
 }
 
-function devareList(listId) {
-  var removeList = document.getElementById(listId);
-  var containerList = removeList.parentNode;
-  containerList.removeChild(removeList);
-  console.log("List Removed");
-  
+// if user click on add button
+addBtn.onclick = () => {
+  let userData = inputBox.value; //get user's entered input value
+  let getLocalStorage = localStorage.getItem("New Todo"); // get local storage
+  if(getLocalStorage == null) { // if local storage is null
+    listArr = []; // create a blank array
+  } else {
+    listArr = JSON.parse(getLocalStorage); // convert JSON format to JavaScript object
+  }
+  listArr.push("Hello world!"); // add user data
+  localStorage.setItem("New Todo", JSON.stringify(listArr)); // convert JavaScript object to JSON format
 }
 
+function showTasks() {
+  let getLocalStorage = localStorage.getItem("New Todo"); // get local storage
+  if(getLocalStorage == null) { // if local storage is null
+    listArr = []; // create a blank array
+  } else {
+    listArr = JSON.parse(getLocalStorage); // convert JSON format to JavaScript object
+  }
+  let newLiTag = "";
+  listArr.forEach((element, index) => {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  });
+}
