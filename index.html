@@ -4,23 +4,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple ToDo List App</title>
-
+  <title>ToDo App</title>
   <!-- external style sheet -->
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/182d36e647.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- header -->
-  <h1 id="header">My To-Do List</h1>
-
-  <!-- user data here -->
-  <form action="index.html" method="post" id="user-list">
-    <input type="text" placeholder="Task" id="list">
-    <button type="button" name="button" id="click-me">Add</button>
-  </form>
-
-  <!-- ordered list -->
-  <ol id="list-items" class="list-group"><br></ol>
+  <div class="wrapper">
+    <header>ToDo App</header>
+    <div class="input-field">
+      <input type="text" placeholder="Add your new todo">
+      <button><i class="far fa-plus"></i></button>
+    </div>
+    <ul class="todo-list">
+      <li>Buy new gaming laptop<span><i class="fas fa-trash"></i></i></span></li>
+      <li>Complete React on Udemy<span<i class="fas fa-trash"></i>></i></span></li>
+      <li>Update Temitope's YouTube Channel<span><i class="fas fa-trash"></i></i></span></li>
+      <li>Reschedule Visa Interview<span><i class="fas fa-trash"></i></i></span></li>
+    </ul>
+    <div class="footer">
+      <span>You have 4 pending tasks</span>
+      <button>Clear All</button>
+    </div>
+  </div>  
 
   <script src="app.js"></script>
 </body>
