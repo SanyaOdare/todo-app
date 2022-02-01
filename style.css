@@ -6,11 +6,36 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #23dae5 0%, #0d4b82 100%);
+}
+
 .wrapper {
   margin: 200px auto;
   max-width: 400px;
   width: 100%;
-  background: yellow;
+  background: #e3f3f1;
   border-radius: 5px;
   padding: 25px;
+}
+
+.wrapper header {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.wrapper .input-field {
+  display: flex;
+  height: 45px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.input-field input {
+  width: 85%;
+  height: 100%;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }
